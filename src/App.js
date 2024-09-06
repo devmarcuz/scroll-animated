@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Usps from "./section/Usps";
+import Hero from "./section/Hero";
+import VideoCarousel from "./section/VideoCarousel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <div className="bg-background relative z-10">
+          <Hero />
+          <Usps />
+        </div>
+        {/* <div>3 col layout</div> */}
+        <VideoCarousel />
+        <div className="h-[300vh]" />
+      </main>
+    </>
   );
 }
 
